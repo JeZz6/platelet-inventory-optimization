@@ -51,6 +51,8 @@ python verify_advanced.py --output-dir results
 
 The audit replays saved forecasts and simulator callbacks; it does not repeat the entire model search. `run_project.py` is the recommended route for a complete rerun.
 
+The saved-result audit uses the stored fitted coefficients for both independent filtering and live simulator callbacks. Fresh optimizer fits can differ slightly across CPUs and numerical libraries, even with pinned package versions and a fixed random seed. The strict reference-comparison command reports such differences; bit-for-bit or `1e-8` agreement after refitting is not guaranteed across machines. The existing forecasting tests separately compare newly fitted offline and live forecasts in the same environment.
+
 ## What the pipeline does
 
 1. `data_synthesis.py` creates 730 days of synthetic requested platelet units using a weekday-specific Poisson distribution and seed 42, then runs the fixed-order simulator benchmark.

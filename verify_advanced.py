@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse,json
 from datetime import date
+from unittest.mock import patch
 import numpy as np
 import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
@@ -70,7 +71,15 @@ def main():
                 saved=expected[expected.decision_date==series.index[i].date().isoformat()].predicted_units
                 np.testing.assert_allclose(estimates,saved,rtol=1e-8,atol=1e-8);filtered_checks+=1
             # Real unchanged simulator, fixed ordering: verify callback forecasts only.
-            provider=AdvancedProvider(dev,spec,date(2025,7,1))
+            # Replay the stored fit so this audit tests state updates and callbacks,
+            # not whether a fresh optimizer run is identical on a different CPU.
+            replay_model=SARIMAX(dev.astype(float),order=spec.order,seasonal_order=spec.seasonal_order,
+                                 trend=spec.trend,enforce_stationarity=True,enforce_invertibility=True,
+                                 simple_differencing=False)
+            replay_params=[final_fit['params'][name] for name in replay_model.param_names]
+            with patch('advanced_forecasting.fit_model',
+                       return_value=(replay_model.filter(replay_params),final_fit.copy())):
+                provider=AdvancedProvider(dev,spec,date(2025,7,1))
             result=simulate(frame,cfg,make_baseline(cfg,scenario),'fixed_daily',forecast_provider=provider)
             verify_run(result,frame,cfg)
             pd.testing.assert_frame_equal(result.daily,pd.read_csv(ROOT/'baseline'/f'baseline_{scenario}_daily.csv'))
