@@ -1,0 +1,7 @@
+scenario,model,fit_period,lag,model_df,ljung_box_stat,p_value
+GuanReference,ARIMA,development,7,4,158.8464776579119,3.251345997263179e-34
+GuanReference,ARIMA,development,14,4,317.93200280133914,2.5000285581065874e-62
+GuanReference,ARIMA,development,21,4,468.7387486749234,7.174615859949651e-89
+GuanReference,SARIMA,development,7,2,5.219123714605744,0.3897276688363449
+GuanReference,SARIMA,development,14,2,12.909721840171358,0.37563652900224
+GuanReference,SARIMA,development,21,2,21.88276889000843,0.290129486028926

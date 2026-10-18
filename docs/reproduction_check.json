@@ -1,0 +1,11 @@
+{
+  "status": "PASSED",
+  "comparison": "exact numeric reproduction of prior verified Guan run",
+  "items": [
+    "forecast_input_GuanReference.csv",
+    "all 2192 saved forecast rows",
+    "all 16 MAE/RMSE rows",
+    "all fixed-order period inventory metrics"
+  ],
+  "tests_passed": 40
+}

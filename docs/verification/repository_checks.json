@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-18",
+  "source_files_unchanged": 46,
+  "original_code_and_config_changed": false,
+  "unit_tests_passed": 40,
+  "forecast_rows_audited": 2192,
+  "accuracy_rows_compared": 16,
+  "full_prefix_checks": 6,
+  "simulator_callbacks": 2,
+  "synthesis_and_benchmark_csvs_identical": 8,
+  "workflow_yaml_valid": true,
+  "workflow_executed_on_github": false,
+  "published_to_github": false,
+  "publication_requirement": "GitHub account connection and destination repository",
+  "reproduction_numeric_tolerance": {
+    "rtol": 1e-08,
+    "atol": 1e-08
+  }
+}

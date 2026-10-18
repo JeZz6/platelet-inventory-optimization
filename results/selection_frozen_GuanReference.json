@@ -1,0 +1,34 @@
+{
+  "ARIMA": {
+    "family": "ARIMA",
+    "order": [
+      2,
+      0,
+      2
+    ],
+    "seasonal_order": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "trend": "c",
+    "key": "ARIMA(2, 0, 2)x(0, 0, 0, 0)"
+  },
+  "SARIMA": {
+    "family": "SARIMA",
+    "order": [
+      0,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      1,
+      7
+    ],
+    "trend": "c",
+    "key": "SARIMA(0, 0, 0)x(1, 0, 1, 7)"
+  }
+}

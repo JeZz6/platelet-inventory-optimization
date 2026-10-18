@@ -1,0 +1,27 @@
+{
+  "status": "PASSED",
+  "comparison": "fresh run against supplied Guan reference",
+  "numeric_tolerance": {
+    "rtol": 1e-08,
+    "atol": 1e-08
+  },
+  "compared_forecast_files": [
+    "forecasts.csv",
+    "forecast_accuracy.csv",
+    "forecast_accuracy_by_weekday.csv",
+    "input_quality.csv",
+    "selection_frozen_GuanReference.json"
+  ],
+  "identical_synthesis_and_benchmark_files": [
+    "baseline/baseline_GuanReference_age_states.csv",
+    "baseline/baseline_GuanReference_audits.csv",
+    "baseline/baseline_GuanReference_daily.csv",
+    "baseline/baseline_GuanReference_pipeline.csv",
+    "baseline/inventory_metrics.csv",
+    "inputs/forecast_input_GuanReference.csv",
+    "inputs/generator_audit_GuanReference.csv",
+    "inputs/weekday_summary.csv"
+  ],
+  "forecast_rows": 2192,
+  "metric_rows": 16
+}

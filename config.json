@@ -1,0 +1,49 @@
+{
+  "contract_version": "1.0",
+  "seed": 42,
+  "start_date": "2024-01-01",
+  "n_days": 730,
+  "train_days": 456,
+  "validation_days": 91,
+  "scenario_scales": {
+    "GuanReference": 1.0
+  },
+  "scenario_ids": {
+    "GuanReference": 0
+  },
+  "weekday_reference_means": [
+    37.5,
+    37.3,
+    39.2,
+    37.8,
+    40.5,
+    27.2,
+    28.4
+  ],
+  "cycle_enabled": false,
+  "cycle_period_days": 7,
+  "cycle_bump_days": 0,
+  "cycle_phase_days": 0,
+  "cycle_multiplier": 1.0,
+  "lead_time_days": 1,
+  "review_period_days": 1,
+  "supply_cv": 0.25,
+  "shelf_life_probabilities": [
+    0.05,
+    0.1,
+    0.2,
+    0.25,
+    0.4
+  ],
+  "initial_stock_by_life": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "initial_orders_due_day_zero": [],
+  "baseline_supply_factor": 1.05,
+  "shortage_weight": 5.0,
+  "expiry_weight": 1.0
+}

@@ -1,0 +1,45 @@
+test_cannot_predict_before_fit_available_or_use_today (test_advanced.AdvancedTests.test_cannot_predict_before_fit_available_or_use_today) ... ok
+test_future_actual_does_not_change_today_or_tomorrow_prediction (test_advanced.AdvancedTests.test_future_actual_does_not_change_today_or_tomorrow_prediction) ... ok
+test_live_provider_matches_offline_for_two_horizons (test_advanced.AdvancedTests.test_live_provider_matches_offline_for_two_horizons) ... ok
+test_metrics_exclude_last_unobserved_tomorrow_and_keep_zeros (test_advanced.AdvancedTests.test_metrics_exclude_last_unobserved_tomorrow_and_keep_zeros) ... ok
+test_missing_dates_invalid_counts_and_revised_past_rejected (test_advanced.AdvancedTests.test_missing_dates_invalid_counts_and_revised_past_rejected) ... ok
+test_selection_rejects_test_length (test_advanced.AdvancedTests.test_selection_rejects_test_length) ... ok
+test_age_adjustment_discounts_tonight_surplus (test_integration.IntegrationTests.test_age_adjustment_discounts_tonight_surplus) ... ok
+test_common_warmup_carry_and_reproducibility (test_integration.IntegrationTests.test_common_warmup_carry_and_reproducibility) ... ok
+test_final_test_perturbation_cannot_change_selected_settings (test_integration.IntegrationTests.test_final_test_perturbation_cannot_change_selected_settings) ... ok
+test_identical_accuracy_dates_and_expected_horizon_counts (test_integration.IntegrationTests.test_identical_accuracy_dates_and_expected_horizon_counts) ... ok
+test_input_invalid_counts_duplicates_and_missing_dates (test_integration.IntegrationTests.test_input_invalid_counts_duplicates_and_missing_dates) ... ok
+test_moving_mean_constant_and_continuous (test_integration.IntegrationTests.test_moving_mean_constant_and_continuous) ... ok
+test_no_provider_before_activation_and_no_same_day_history (test_integration.IntegrationTests.test_no_provider_before_activation_and_no_same_day_history) ... ok
+test_offline_and_live_forecasts_identical (test_integration.IntegrationTests.test_offline_and_live_forecasts_identical) ... ok
+test_pipeline_only_arrivals_within_protection_horizon (test_integration.IntegrationTests.test_pipeline_only_arrivals_within_protection_horizon) ... ok
+test_policy_does_not_use_trained_mean_before_activation (test_integration.IntegrationTests.test_policy_does_not_use_trained_mean_before_activation) ... ok
+test_provider_uses_requested_history_for_both_horizons (test_integration.IntegrationTests.test_provider_uses_requested_history_for_both_horizons) ... ok
+test_shared_rounding_is_half_up_not_ceiling (test_integration.IntegrationTests.test_shared_rounding_is_half_up_not_ceiling) ... ok
+test_supplied_fixed_baseline_reproduced (test_integration.IntegrationTests.test_supplied_fixed_baseline_reproduced) ... ok
+test_supplied_inputs_exact_calendar_and_split (test_integration.IntegrationTests.test_supplied_inputs_exact_calendar_and_split) ... ok
+test_tuning_rejects_test_rows (test_integration.IntegrationTests.test_tuning_rejects_test_rows) ... ok
+test_bad_orders_and_inputs_fail (test_simulator.SimulatorTests.test_bad_orders_and_inputs_fail) ... ok
+test_baseline_joint_weekday_cycle_mean (test_simulator.SimulatorTests.test_baseline_joint_weekday_cycle_mean) ... ok
+test_clipping_negative_supply_shock (test_simulator.SimulatorTests.test_clipping_negative_supply_shock) ... ok
+test_cycle_definition_and_disable (test_simulator.SimulatorTests.test_cycle_definition_and_disable) ... ok
+test_future_demand_changes_cannot_change_earlier_decisions (test_simulator.SimulatorTests.test_future_demand_changes_cannot_change_earlier_decisions) ... ok
+test_hand_calculated_three_days (test_simulator.SimulatorTests.test_hand_calculated_three_days) ... ok
+test_identical_seed_reproduces_entire_run (test_simulator.SimulatorTests.test_identical_seed_reproduces_entire_run) ... ok
+test_initial_pipeline_arrives_on_day_zero (test_simulator.SimulatorTests.test_initial_pipeline_arrives_on_day_zero) ... ok
+test_last_usable_day_is_eligible (test_simulator.SimulatorTests.test_last_usable_day_is_eligible) ... ok
+test_no_demand_all_initial_stock_eventually_expires (test_simulator.SimulatorTests.test_no_demand_all_initial_stock_eventually_expires) ... ok
+test_no_supply (test_simulator.SimulatorTests.test_no_supply) ... ok
+test_oldest_first_exact_cohorts (test_simulator.SimulatorTests.test_oldest_first_exact_cohorts) ... ok
+test_policies_share_supply_and_future_shelf_randomness (test_simulator.SimulatorTests.test_policies_share_supply_and_future_shelf_randomness) ... ok
+test_policy_and_forecasts_cannot_see_current_or_future_demand (test_simulator.SimulatorTests.test_policy_and_forecasts_cannot_see_current_or_future_demand) ... ok
+test_rounding_halves_up (test_simulator.SimulatorTests.test_rounding_halves_up) ... ok
+test_scenario_iteration_order_does_not_change_demand (test_simulator.SimulatorTests.test_scenario_iteration_order_does_not_change_demand) ... ok
+test_split_calendar_boundaries (test_simulator.SimulatorTests.test_split_calendar_boundaries) ... ok
+test_stock_and_request_conservation_all_scenarios (test_simulator.SimulatorTests.test_stock_and_request_conservation_all_scenarios) ... ok
+test_today_order_cannot_serve_today (test_simulator.SimulatorTests.test_today_order_cannot_serve_today) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 3.067s
+
+OK

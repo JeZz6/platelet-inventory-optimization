@@ -1,0 +1,2 @@
+scenario,rows,zero_demand_days,missing_dates,duplicate_dates,invalid_counts,input_sha256
+GuanReference,730,0,0,0,0,932273ef52c315aa2b29dfb2d11e93b25eaabc94d5258d08ae8fcdf0369c2a31

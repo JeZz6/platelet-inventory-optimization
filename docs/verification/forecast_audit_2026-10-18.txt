@@ -1,0 +1,11 @@
+GuanReference ARIMA: saved metrics, full-prefix filtering and simulator callback verified
+GuanReference SARIMA: saved metrics, full-prefix filtering and simulator callback verified
+{
+  "status": "PASSED",
+  "forecast_rows": 2192,
+  "metric_rows": 16,
+  "independent_prefix_filter_checks": 6,
+  "live_simulator_callback_runs": 2,
+  "negative_corrections": 0,
+  "inventory_policy_comparison": "fixed benchmark rerun on Guan inputs; alternative policy comparison pending"
+}

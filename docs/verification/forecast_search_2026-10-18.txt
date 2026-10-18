@@ -1,0 +1,21 @@
+GuanReference ARIMA: 6/18 candidates checked
+GuanReference ARIMA: 12/18 candidates checked
+GuanReference ARIMA: 18/18 candidates checked
+GuanReference selected ARIMA(2, 0, 2)x(0, 0, 0, 0); validation today MAE=6.4967
+GuanReference SARIMA: 6/30 candidates checked
+GuanReference SARIMA: 12/30 candidates checked
+GuanReference SARIMA: 18/30 candidates checked
+GuanReference SARIMA: 24/30 candidates checked
+GuanReference SARIMA: 30/30 candidates checked
+GuanReference selected SARIMA(0, 0, 0)x(1, 0, 1, 7); validation today MAE=5.1059
+GuanReference ARIMA final test complete
+GuanReference SARIMA final test complete
+     scenario split           method  horizon_days   n      MAE     RMSE
+GuanReference  test            ARIMA             1 183 6.156434 7.570737
+GuanReference  test            ARIMA             2 182 6.126556 7.542900
+GuanReference  test           SARIMA             1 183 5.141597 6.329416
+GuanReference  test           SARIMA             2 182 5.103924 6.284160
+GuanReference  test moving_average_7             1 183 6.778298 8.304368
+GuanReference  test moving_average_7             2 182 6.702512 8.312042
+GuanReference  test   seasonal_naive             1 183 7.060109 8.909993
+GuanReference  test   seasonal_naive             2 182 7.054945 8.914737

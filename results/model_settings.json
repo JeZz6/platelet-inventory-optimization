@@ -1,0 +1,907 @@
+{
+  "status": "PRELIMINARY_SINGLE_SEED_SYNTHETIC",
+  "seed": 42,
+  "split": {
+    "status": "Member 2 contract v1.0 exact configured day-index boundaries",
+    "training": [
+      "2024-01-01",
+      "2025-03-31"
+    ],
+    "validation": [
+      "2025-04-01",
+      "2025-06-30"
+    ],
+    "final_test": [
+      "2025-07-01",
+      "2025-12-30"
+    ]
+  },
+  "selection": "minimum validation today MAE; ties smaller AR/MA count, then lexical key",
+  "validation_fit": "training only; fixed parameters, rolling filtered states",
+  "test_fit": "selected orders refitted once on full development; fixed parameters, rolling filtered states",
+  "features": "past requested counts only; no cycle/calendar regressors or generator means",
+  "correction": "max(0, raw prediction), continuous forecasts for metrics",
+  "implementation": "statsmodels SARIMAX used for both nonseasonal ARIMA and seasonal SARIMA",
+  "ARIMA_grid": [
+    {
+      "family": "ARIMA",
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(0, 0, 0)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(0, 0, 1)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        0,
+        0,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(0, 0, 2)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(1, 0, 0)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(1, 0, 1)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        1,
+        0,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(1, 0, 2)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        2,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(2, 0, 0)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(2, 0, 1)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        2,
+        0,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "c",
+      "key": "ARIMA(2, 0, 2)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        0,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(0, 1, 0)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(0, 1, 1)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(0, 1, 2)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(1, 1, 0)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(1, 1, 1)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        1,
+        1,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(1, 1, 2)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(2, 1, 0)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        2,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(2, 1, 1)x(0, 0, 0, 0)"
+    },
+    {
+      "family": "ARIMA",
+      "order": [
+        2,
+        1,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend": "n",
+      "key": "ARIMA(2, 1, 2)x(0, 0, 0, 0)"
+    }
+  ],
+  "SARIMA_grid": [
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(0, 0, 0)x(1, 0, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(0, 0, 0)x(0, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(0, 0, 0)x(1, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 0, 0)x(0, 1, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 0, 0)x(1, 1, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(1, 0, 0)x(1, 0, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(1, 0, 0)x(0, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(1, 0, 0)x(1, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 0, 0)x(0, 1, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 0, 0)x(1, 1, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(0, 0, 1)x(1, 0, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(0, 0, 1)x(0, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(0, 0, 1)x(1, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 0, 1)x(0, 1, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 0, 1)x(1, 1, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(1, 0, 1)x(1, 0, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(1, 0, 1)x(0, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        7
+      ],
+      "trend": "c",
+      "key": "SARIMA(1, 0, 1)x(1, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 0, 1)x(0, 1, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 0, 1)x(1, 1, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 1, 1)x(1, 0, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 1, 1)x(0, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 1, 1)x(1, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 1, 1)x(0, 1, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(0, 1, 1)x(1, 1, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 1, 0)x(1, 0, 0, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 1, 0)x(0, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 1, 0)x(1, 0, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 1, 0)x(0, 1, 1, 7)"
+    },
+    {
+      "family": "SARIMA",
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        0,
+        7
+      ],
+      "trend": "n",
+      "key": "SARIMA(1, 1, 0)x(1, 1, 0, 7)"
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "statsmodels": "0.14.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "scenarios": {
+    "GuanReference": {
+      "selected_models": {
+        "ARIMA": {
+          "family": "ARIMA",
+          "order": [
+            2,
+            0,
+            2
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "trend": "c",
+          "key": "ARIMA(2, 0, 2)x(0, 0, 0, 0)"
+        },
+        "SARIMA": {
+          "family": "SARIMA",
+          "order": [
+            0,
+            0,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            7
+          ],
+          "trend": "c",
+          "key": "SARIMA(0, 0, 0)x(1, 0, 1, 7)"
+        }
+      },
+      "validation_fits": {
+        "ARIMA": {
+          "converged": true,
+          "maxiter": 200,
+          "warnings": [],
+          "aic": 3123.412436917404,
+          "params": {
+            "intercept": 86.59796251154168,
+            "ar.L1": -0.44626790348550804,
+            "ar.L2": -0.9994880458150769,
+            "ma.L1": 0.45905351948690787,
+            "ma.L2": 0.9998181332557676,
+            "sigma2": 52.93316191929934
+          },
+          "training_end": "2025-03-31",
+          "training_n": 456
+        },
+        "SARIMA": {
+          "converged": true,
+          "maxiter": 200,
+          "warnings": [],
+          "aic": 2953.386308952047,
+          "params": {
+            "intercept": 0.003549727692934783,
+            "ar.S.L7": 0.9998997489242376,
+            "ma.S.L7": -0.9872460326903302,
+            "sigma2": 35.5679017149307
+          },
+          "training_end": "2025-03-31",
+          "training_n": 456
+        }
+      },
+      "final_fits": {
+        "ARIMA": {
+          "converged": true,
+          "maxiter": 200,
+          "warnings": [],
+          "aic": 3765.256076032235,
+          "params": {
+            "intercept": 86.65275854677112,
+            "ar.L1": -0.44466646820836175,
+            "ar.L2": -0.9998304621825467,
+            "ma.L1": 0.45143001994392695,
+            "ma.L2": 0.9984397492001938,
+            "sigma2": 55.199778205838456
+          },
+          "training_end": "2025-06-30",
+          "training_n": 547
+        },
+        "SARIMA": {
+          "converged": true,
+          "maxiter": 200,
+          "warnings": [
+            "Non-stationary starting seasonal autoregressive Using zeros as starting parameters."
+          ],
+          "aic": 3545.498661684901,
+          "params": {
+            "intercept": 0.022500567710973925,
+            "ar.S.L7": 0.9993673486953026,
+            "ma.S.L7": -0.9685529997826741,
+            "sigma2": 36.4772541710869
+          },
+          "training_end": "2025-06-30",
+          "training_n": 547
+        }
+      }
+    }
+  }
+}

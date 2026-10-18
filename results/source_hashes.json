@@ -1,0 +1,10 @@
+{
+  "inputs/forecast_input_GuanReference.csv": "932273ef52c315aa2b29dfb2d11e93b25eaabc94d5258d08ae8fcdf0369c2a31",
+  "inputs/generator_audit_GuanReference.csv": "c5bd664b71e72b2dce66ef9265194d355e8b9d19157695902717757a0515efa3",
+  "inputs/weekday_summary.csv": "b07fd8675098541d9eefce499bf2d846266d4f8b7c65986e3ff22e10523ad138",
+  "config.json": "fa8aec8c153cc73d1270fc6ad6175a4d787eb8c0ae03a5a65890eb769866fde8",
+  "advanced_forecasting.py": "fb04c3214f75dac7169641378c32356bb7e7d64274a5918a072c3976deb4b920",
+  "forecast_models.py": "86828ec7fe0c312cfce668ba1e1cd9ebfe627d031efd98d13be62deeb9837e1b",
+  "forecasting.py": "e71b44d9d85157e2808af8ad5b44ed42da88a5f32c4c6eab499219fd25fb526d",
+  "simulator.py": "f9d398ab50ab418d2946e2266ef9c09284d668613cda0484abecebec23ebb4a8"
+}
